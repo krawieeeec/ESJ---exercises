@@ -241,10 +241,9 @@
 
     MYAPP.operators = (function(){
         var deepEqual = function(firstArgument, secondArgument) {
-            var result, tableOfPropertiesFirstArgument = [], tableOfPropertiesSecondArgument = [];
-
+            var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
+                        
             if((typeof firstArgument == "undefined") || (typeof secondArgument == "undefined")) {
-                console.log("You don't pass needed arguments to function.");
                 return result;
             } else if((typeof firstArgument != "object") && (typeof secondArgument != "object")) {
                 if(firstArgument === secondArgument) {
@@ -258,22 +257,44 @@
                 if(firstArgument == null && secondArgument == null) {
                     result = true;
                     return result;
-                } else if(((firstArgument == null) && (secondArgument != null)) || ((firstArgument != null) && (secondArgument == null))) {
-                    result = false;
-                    return result;
-                } else {
-                    for(var propertyFirstArgument in firstArgument) {
-                        tableOfPropertiesFirstArgument.push(property);
-                    }
-                    for(var propertySecondArgument in secondArgument) {
-                        tableOfPropertiesSecondArgument.push(property);
-                    }
-                    if(tableOfPropertiesFirstArgument.length != tableOfPropertiesSecondArgument.length) {
+                } else if(firstArgument != null && secondArgument != null) {
+                    amountOfPropertiesFirstArgument = Object.keys(firstArgument).length;
+                    amountOfPropertiesSecondArgument = Object.keys(secondArgument).length;
+                    if(amountOfPropertiesFirstArgument != amountOfPropertiesSecondArgument) {
                         result = false;
                         return result;
                     } else {
-                        //TODO
+                        for(var propertyFirstArgument in firstArgument) {
+                            for(var propertySecondArgument in secondArgument) {
+                                if(propertyFirstArgument === propertySecondArgument) {
+                                    if((typeof firstArgument[propertyFirstArgument] == "object") && (typeof secondArgument[propertySecondArgument] == "object")) {
+                                        if((firstArgument[propertyFirstArgument] != null) && (secondArgument[propertyFirstArgument] != null)) {
+                                            checkedProperties.push(propertyFirstArgument);
+                                            result = deepEqual(firstArgument[propertyFirstArgument], secondArgument[propertySecondArgument]);
+                                            if(!result) {
+                                                return result;
+                                            }
+                                        }
+                                    } else {
+                                        if(firstArgument[propertyFirstArgument] === secondArgument[propertySecondArgument]) {
+                                            checkedProperties.push(propertyFirstArgument);
+                                            result = true;
+                                        }else {
+                                            result = false;
+                                            return result;
+                                        }
+                                    }
+                                }
+                            }
+                            if(checkedProperties.indexOf(propertyFirstArgument) == elementNotFound) {
+                                return false;
+                            }
+                        }
+                        return result;
                     }
+                } else {
+                    result = false;
+                    return result;
                 }       
             } else {
                 result = false;
@@ -293,5 +314,26 @@
     // console.log(MYAPP.list.listToArray(MYAPP.list.arrayToList([1,2,3])));
     // console.log(MYAPP.list.prepend(123, {value: 1, rest: null}));
     // console.log(MYAPP.list.nth({value:1, rest:{value:2, rest: null}}, 2))
-    // console.log(MYAPP.operators.deepEqual({},{}))
+    // var firstObject = {
+    //     p: {
+    //         table: [1,2],
+    //         h: {
+    //             g: 'tab'
+    //         }
+    //     }, 
+    //     house: 'Warsaw',
+    //     ania: 'dawid'
+    //    }
+    // var secondObject = {
+    //     ania: 'dawid',
+    //     house: 'Warsaw',
+    //     p: {
+    //         table: [1,2],
+    //         h: {
+    //             g: 'tab'
+    //         }
+    //     }
+        
+    // }
+    // console.log(MYAPP.operators.deepEqual(firstObject, secondObject));
 }())
