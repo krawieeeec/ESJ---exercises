@@ -1,7 +1,8 @@
 (function() {
 
     var deepEqual = function(firstArgument, secondArgument) {
-        var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
+        var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, 
+        amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
                     
         if((typeof firstArgument == "undefined") || (typeof secondArgument == "undefined")) {
             return result;
@@ -71,8 +72,8 @@
         }, 
         house: 'Warsaw',
         ania: 'dawid'
-       }
-    var secondObject = {
+       },
+       secondObject = {
         ania: 'dawid',
         house: 'Warsaw',
         p: {
@@ -81,7 +82,7 @@
                 g: 'tab'
             }
         }
-        
     }
+
     console.log(deepEqual(firstObject, secondObject));
 }())

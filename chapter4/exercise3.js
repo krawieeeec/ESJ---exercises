@@ -56,7 +56,7 @@
         var resultingList = {
             value: null,
             rest: null
-        }
+        };
         if((typeof element == "undefined") || (typeof list == "undefined")) {
             console.log("You don't pass needed arguments to function.");
             return resultingList;
