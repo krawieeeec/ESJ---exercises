@@ -2,17 +2,12 @@
     
     //Custom types of objects.
     function ArraySeq(array) {
-        if(!(this instanceof ArraySeq)) {
-            return new ArraySeq();
-        }
         this.array = array;
     }
 
     function RangeSeq(from, to) {
-        if(!(this instanceof RangeSeq)) {
-            return new RangeSeq();
-        }
         this.array = [];
+        
         if(from != undefined && to != undefined) {
             for(;from <= to; from++){
                 this.array.push(from);

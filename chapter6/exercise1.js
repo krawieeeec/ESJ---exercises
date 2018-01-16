@@ -1,16 +1,11 @@
 (function() {
 
     function Vector(x, y) {
-        if(!(this instanceof Vector)) {
-            return new Vector();
-        }
-
         this.x = x;
         this.y = y;
     }
 
     Vector.prototype.plus = function(vector) {
-        
         this.x += vector.x;
         this.y += vector.y;
     };
