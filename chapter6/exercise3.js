@@ -20,7 +20,7 @@
         }
     }
 
-    //declaration of objects
+    //Declaration of objects
     var x = {
         y:4,
         x:5,

@@ -18,6 +18,7 @@
         this.x -= vector.x;
         this.y -= vector.y;
     };
+
     Object.defineProperty(Vector.prototype, "length", {
         get: function() {
             var x = Math.pow(this.x, 2),
@@ -27,8 +28,9 @@
         }
     });
 
-    var vector1 = new Vector(3,4);
-    var vector2 = new Vector(3,-40);
+    var vector1 = new Vector(3,4), 
+    vector2 = new Vector(3,-40);
+    
     vector1.plus(vector2);
     console.log(vector1);
     vector1.minus(vector2);
