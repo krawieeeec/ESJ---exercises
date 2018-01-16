@@ -39,17 +39,16 @@
         {"name": "Anna van Hecke", "sex": "f", "born": 1607, "died": 1670, "father": "Paschasius van Hecke", "mother": "Martijntken Beelaert"},
         {"name": "Maria Sturm", "sex": "f", "born": 1835, "died": 1917, "father": "Charles Sturm", "mother": "Seraphina Spelier"},
         {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
-      ];
-
-      var children = ancestry.filter(function(person) {
+      ],
+      
+      children = ancestry.filter(function(person) {
         if(person.mother != null) {
               return person;
           }
-      })
-      
-      
-      var average = function(array) {
-        var sumOfAge = 0, sumOfAgeMother = 0, mother;  
+      }), 
+
+      average = function(array) {
+        var sumOfAge = 0, mother;  
         
         array.forEach(element => {     
             mother = array.filter(function(person) {
@@ -62,7 +61,8 @@
             }
             
         });
-        return sumOfAge / array.length;
+        return (sumOfAge / array.length).toFixed(1);
       }
+      console.log(children)      
       console.log(average(children));
 }())

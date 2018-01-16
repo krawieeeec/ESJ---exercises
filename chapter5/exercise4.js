@@ -10,6 +10,7 @@
         });
         return result;
     },
+
     every = function(array, predicate) {
         var result = true;
         array.forEach(element => {
@@ -18,11 +19,12 @@
             }
         });
         return result;
-    };
-
-    var isNaN = function(element) {
+    },
+    
+    isNaN = function(element) {
         return Number.isNaN(element);
     }
+
     console.log(some(array, isNaN));
     console.log(every(array, isNaN));
 }())

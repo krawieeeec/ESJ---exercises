@@ -39,11 +39,9 @@
         {"name": "Anna van Hecke", "sex": "f", "born": 1607, "died": 1670, "father": "Paschasius van Hecke", "mother": "Martijntken Beelaert"},
         {"name": "Maria Sturm", "sex": "f", "born": 1835, "died": 1917, "father": "Charles Sturm", "mother": "Seraphina Spelier"},
         {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
-      ];
-
+      ],
       
-
-      var createCenturies = function(array) {
+      createCenturies = function(array) {
         var property, centuries = {};
 
         array.forEach(person => {
@@ -57,8 +55,8 @@
         });
         return centuries;
     },
+
     displayAverageAgePerCentury = function(centuries) {
-      
       var output = "", currentAverage = 0;
 
       function countAverageAge(array) {
@@ -75,5 +73,6 @@
       }
       return output;
     }; 
+
     console.log(displayAverageAgePerCentury(createCenturies(ancestry)));
 }())    
