@@ -5,7 +5,7 @@
 
         if((typeof sequenceCharacters == "undefined") || (typeof selectedChar == "undefined")) {
             result = "You don't pass two needed arguments to function.";
-            return console.log(result);
+            return result;
         } else if(((typeof sequenceCharacters == "string") || (sequenceCharacters instanceof String)) &&
         ((typeof selectedChar == "string") || (selectedChar instanceof String))) {
             for(var i = 0, lengthOfSequence = sequenceCharacters.length; i < lengthOfSequence; i++) {
@@ -14,13 +14,13 @@
                 }
             }
             result = counter;
-            return console.log(result);
+            return result;
         } else {
             result = "You don't pass arguments to function type of string.";
-            return console.log(result);
+            return result;
         }
     };
 
-    countChar("Dadasdddasddwid", "a");
+    console.log(countChar("Dadasdddasddwid", "a"));
 
 }())

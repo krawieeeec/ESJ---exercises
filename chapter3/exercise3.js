@@ -5,7 +5,7 @@
         
         if(typeof sequenceCharacters == "undefined") {
             result = "You don't pass argument to function.";
-            return console.log(result);
+            return result;
         } else if((typeof sequenceCharacters == "string") || (sequenceCharacters instanceof String)) {
             for(var i = 0, lengthOfSequence = sequenceCharacters.length; i < lengthOfSequence; i++) {
                 if(sequenceCharacters[i] == "B"){
@@ -13,12 +13,12 @@
                 }
             }
             result = counter;
-            return console.log(result);
+            return result;
         } else {
             result = "You don't pass argument to function as type of string.";
-            return console.log(result);
+            return result;
         }
     }
 
-    countBs("BBasdasdadbbbbB");
+    console.log(countBs("BBasdasdadbbbbB"));
 }())
