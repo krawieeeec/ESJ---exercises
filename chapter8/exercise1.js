@@ -5,10 +5,11 @@
     }
 
     function primitiveMultiply(a, b) {
-        if (Math.random() < 0.5)
-          return a * b;
-        else
-          throw new MultiplicatorUnitFailure("Occurrence error during muliplication.");
+        if(Math.random() < 0.5) {
+            return a * b;
+        } else {
+            throw new MultiplicatorUnitFailure("Occurrence error during muliplication.");
+        }
     }
 
     function reliableMultiply(a, b) {
