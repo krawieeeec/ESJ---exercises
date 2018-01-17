@@ -25,5 +25,6 @@
         }
         return result;
     }      
-      console.log(reliableMultiply(8, 8));
+    
+    console.log(reliableMultiply(8, 8));
 }())
