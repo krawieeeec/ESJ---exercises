@@ -5,3 +5,4 @@
     var result = text.replace(/'(?!s)(?!m)/g,'"');
     console.log(result);
 }())
+
