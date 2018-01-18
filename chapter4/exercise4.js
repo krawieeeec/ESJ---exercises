@@ -4,9 +4,7 @@
         var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, 
         amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
                     
-        if((typeof firstArgument == "undefined") || (typeof secondArgument == "undefined")) {
-            return result;
-        } else if((typeof firstArgument != "object") && (typeof secondArgument != "object")) {
+        if((typeof firstArgument != "object") && (typeof secondArgument != "object")) {
             if(firstArgument === secondArgument) {
                 result = true
                 return result;

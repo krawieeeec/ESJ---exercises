@@ -6,49 +6,36 @@
             rest: null
         }, referenceToAllList = list;
 
-        if(typeof array == "undefined") {
-            console.log("You don't pass argument to function.");
-            return list;
-        } else if(!(Array.isArray(array))) {
-            console.log("You don't pass argument to function type of array.");
-            return list;
-        } else if(Array.isArray(array)) {
-            for(var i = 0, lengthOfArray = array.length; i < lengthOfArray; i++) {
-                list.value = array[i];
+        for(var i = 0, lengthOfArray = array.length; i < lengthOfArray; i++) {
+            list.value = array[i];
                 
-                if(i < (lengthOfArray - 1)) {
-                    list.rest = {
-                        value: null,
-                        rest: null
-                    };
-                    list = list.rest;
-                } else if(i == (lengthOfArray - 1)) {
-                    list.rest = null;
-                }
+            if(i < (lengthOfArray - 1)) {
+                list.rest = {
+                    value: null,
+                    rest: null
+                };
+                list = list.rest;
+            } else if(i == (lengthOfArray - 1)) {
+                list.rest = null;
             }
-            return referenceToAllList;                   
         }
+        return referenceToAllList;                   
     },
 
     listToArray = function(list) {
         var array = [], deepingList = true;
 
-        if(typeof list == "undefined") {
-            console.log("You don't pass argument to function.");
-        } else if(typeof list != "object") {
-            console.log("You don't pass arguemnt to function type of object.");
-        } else if(typeof list == "object") {
-            do{
-                if(list.value != null) {
-                    array.push(list.value);
-                    if(list.rest != null) {
-                        list = list.rest;
-                    } else {
-                        deepingList = false;
-                    }
+        do{
+            if(list.value != null) {
+                array.push(list.value);
+                if(list.rest != null) {
+                    list = list.rest;
+                } else {
+                    deepingList = false;
                 }
-            } while(deepingList);
-        }
+            }
+        } while(deepingList);
+    
         return array;
     },
 
@@ -57,34 +44,27 @@
             value: null,
             rest: null
         };
-        if((typeof element == "undefined") || (typeof list == "undefined")) {
-            console.log("You don't pass needed arguments to function.");
-            return resultingList;
-        } else if((typeof element != "undefined") && (typeof list != "undefined")) {
-            resultingList.value = element;
-            resultingList.rest = list;
-            return resultingList;
-        }
+
+        resultingList.value = element;
+        resultingList.rest = list;
+        
+        return resultingList;
     },
 
     nth = function(list, positionOnList) {
         var foundElement, deepingList = true;
 
-        if((typeof positionOnList == "undefined") || (typeof list == "undefined")) {
-            console.log("You don't pass needed arguments to function.");
-            return foundElement;
-        } else if((typeof positionOnList != "undefined") || (typeof list != "undefined")) {
-            for(var i = 1; i <= positionOnList; i++){
-                if(i == positionOnList) {
-                    foundElement = list.value;
-                } else if(list.rest == null){
-                    break;
-                } else {
-                    list = list.rest;
-                } 
-            }
-            return foundElement;
+        for(var i = 1; i <= positionOnList; i++){
+            if(i == positionOnList) {
+                foundElement = list.value;
+            } else if(list.rest == null){
+                break;
+            } else {
+                list = list.rest;
+            } 
         }
+        return foundElement;
+
     };
 
     console.log(arrayToList([1,2,3]));
