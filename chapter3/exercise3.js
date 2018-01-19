@@ -1,6 +1,6 @@
 (function() {
 
-    countBs = function(sequenceCharacters) {
+    function countBs(sequenceCharacters) {
         var counter = 0, result;
         
         for(var i = 0, lengthOfSequence = sequenceCharacters.length; i < lengthOfSequence; i++) {

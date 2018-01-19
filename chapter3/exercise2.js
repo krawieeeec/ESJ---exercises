@@ -1,6 +1,6 @@
 (function() {
 
-    var isEven = function isEven(number) {
+    function isEven(number) {
         var result;
         
         if(number == 0) {

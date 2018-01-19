@@ -1,6 +1,6 @@
 (function() {
 
-   var min = function(firstNumber, secondNumber) {
+   function min(firstNumber, secondNumber) {
         var result;
 
         if(firstNumber < secondNumber) {

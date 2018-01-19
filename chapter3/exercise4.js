@@ -1,6 +1,6 @@
 (function() {
 
-    var countChar = function(sequenceCharacters, selectedChar) {
+    function countChar(sequenceCharacters, selectedChar) {
         var counter = 0, result;
 
         for(var i = 0, lengthOfSequence = sequenceCharacters.length; i < lengthOfSequence; i++) {
