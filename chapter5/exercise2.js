@@ -45,9 +45,9 @@
         if(person.mother != null) {
               return person;
           }
-      }), 
+      });
 
-      average = function(array) {
+      function average(array) {
         var sumOfAge = 0, mother;  
         
         array.forEach(element => {     
@@ -63,6 +63,6 @@
         });
         return (sumOfAge / array.length).toFixed(1);
       }
-      console.log(children)      
+            
       console.log(average(children));
 }())

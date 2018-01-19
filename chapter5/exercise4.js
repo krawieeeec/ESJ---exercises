@@ -1,7 +1,7 @@
 (function() {
 
-    var array = [1, NaN, NaN],
-    some = function(array, predicate) {
+    var array = [1, NaN, NaN];
+    function some(array, predicate) {
         var result = false;
         array.forEach(element => {
             if(predicate(element)) {
@@ -9,9 +9,9 @@
             }
         });
         return result;
-    },
+    }
 
-    every = function(array, predicate) {
+    function every(array, predicate) {
         var result = true;
         array.forEach(element => {
             if(!predicate(element)) {
@@ -19,9 +19,9 @@
             }
         });
         return result;
-    },
+    }
     
-    isNaN = function(element) {
+    function isNaN(element) {
         return Number.isNaN(element);
     }
 
