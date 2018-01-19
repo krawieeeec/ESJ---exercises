@@ -1,15 +1,15 @@
 (function() {
 
-    var reverseArray = function(unturnedArray) {
+    function reverseArray(unturnedArray) {
         var reversedArray = [];
 
         for(var i = (unturnedArray.length - 1), beginningArray = 0; i >= beginningArray; i--) {
             reversedArray.push(unturnedArray[i]);
         }
         return reversedArray;
-    },
+    }
     
-    reverseArrayInPlace = function(array) {
+    function reverseArrayInPlace(array) {
         var temporaryStorageValue = 0, leftIndex = 0, rightIndex = 0;
 
         rightIndex = (array.length - 1);

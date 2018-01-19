@@ -1,6 +1,6 @@
 (function() {
 
-    var deepEqual = function(firstArgument, secondArgument) {
+    function deepEqual(firstArgument, secondArgument) {
         var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, 
         amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
                     

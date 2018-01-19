@@ -1,6 +1,6 @@
 (function() {
 
-    var arrayToList = function(array) {
+    function arrayToList(array) {
         var list = {
             value: null,
             rest: null
@@ -20,9 +20,9 @@
             }
         }
         return referenceToAllList;                   
-    },
+    }
 
-    listToArray = function(list) {
+    function listToArray(list) {
         var array = [], deepingList = true;
 
         do{
@@ -37,9 +37,9 @@
         } while(deepingList);
     
         return array;
-    },
+    }
 
-    prepend = function(element, list) {
+    function prepend(element, list) {
         var resultingList = {
             value: null,
             rest: null
@@ -49,9 +49,9 @@
         resultingList.rest = list;
         
         return resultingList;
-    },
+    }
 
-    nth = function(list, positionOnList) {
+    function nth(list, positionOnList) {
         var foundElement, deepingList = true;
 
         for(var i = 1; i <= positionOnList; i++){

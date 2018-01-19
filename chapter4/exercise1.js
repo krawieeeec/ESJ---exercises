@@ -1,5 +1,5 @@
 (function() {
-    range = function(start, end) {
+    function range(start, end) {
         var result = [], thirdOptionalArgument = 0;
         
         if(arguments.length == 2){
@@ -27,8 +27,8 @@
                 return result;
             }
         } 
-    },
-    sum = function(arrayOfNumbers) {
+    }
+    function sum(arrayOfNumbers) {
             var result = 0;
             console.log(arrayOfNumbers);
             
