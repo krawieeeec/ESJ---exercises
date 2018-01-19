@@ -1,6 +1,6 @@
 (function() {
 
-    displayDivisibilityNumbers = function() {
+    function displayDivisibilityNumbers() {
         var numberDivideByThree = false, numberDivideByFive = false, number = 1, result = "";
 
         while(number < 100){

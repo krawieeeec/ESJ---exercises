@@ -1,6 +1,6 @@
 (function() {
 
-    displayFlexChessBoard = function(widthChessBoard, heightChessBoard) {
+    function displayFlexChessBoard(widthChessBoard, heightChessBoard) {
         var lineOfChessBoard = "", subStringLineOfChessBoard = "";
 
             for(var positionInString = 0; positionInString < widthChessBoard; positionInString++) {

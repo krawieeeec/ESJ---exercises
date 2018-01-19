@@ -1,6 +1,6 @@
 (function() {
 
-    displayFixedChessBoard = function() {
+    function displayFixedChessBoard() {
         var lineOfChessBoard = "";
 
         for(var rowOfChessBoard = 1; rowOfChessBoard <= 8; rowOfChessBoard++) {
