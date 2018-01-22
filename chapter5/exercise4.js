@@ -1,5 +1,3 @@
-(function() {
-
     var array = [1, NaN, NaN];
     function some(array, predicate) {
         var result = false;
@@ -27,4 +25,3 @@
 
     console.log(some(array, isNaN));
     console.log(every(array, isNaN));
-}())
