@@ -1,5 +1,3 @@
-(function() {
-
     function countBs(sequenceCharacters) {
         var counter = 0, result;
         
@@ -13,4 +11,3 @@
     }
 
     console.log(countBs("BBasdasdadbbbbB"));
-}())

@@ -1,5 +1,3 @@
-(function() {
-
    function min(firstNumber, secondNumber) {
         var result;
 
@@ -18,4 +16,3 @@
 
    console.log(min(3,1));
 
-}())

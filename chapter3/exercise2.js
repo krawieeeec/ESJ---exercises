@@ -1,5 +1,3 @@
-(function() {
-
     function isEven(number) {
         var result;
         
@@ -19,4 +17,3 @@
     }
     
     console.log(isEven(-444));
-}())

@@ -1,5 +1,3 @@
-(function() {
-
     function countChar(sequenceCharacters, selectedChar) {
         var counter = 0, result;
 
@@ -13,5 +11,3 @@
     };
 
     console.log(countChar("Dadasdddasddwid", "a"));
-
-}())
