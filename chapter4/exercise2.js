@@ -1,4 +1,3 @@
-(function() {
 
     function reverseArray(unturnedArray) {
         var reversedArray = [];
@@ -27,5 +26,3 @@
 
     console.log(reverseArray([22,23,24,25,111]));
     console.log(reverseArrayInPlace([1,2,3,4,5,6]));
-    
-}())

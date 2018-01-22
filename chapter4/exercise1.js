@@ -1,4 +1,3 @@
-(function() {
     function range(start, end) {
         var result = [], thirdOptionalArgument = 0;
         
@@ -39,5 +38,3 @@
         };
 
     console.log(sum(range(5, -5, -3)));
-
-}())

@@ -1,4 +1,3 @@
-(function() {
 
     function arrayToList(array) {
         var list = {
@@ -72,5 +71,3 @@
     console.log(listToArray(arrayToList([1,2,3])));
     console.log(prepend(123, {value: 1, rest: null}));
     console.log(nth({value:1, rest:{value:2, rest: null}}, 2))
-
-}())

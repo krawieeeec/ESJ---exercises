@@ -1,5 +1,3 @@
-(function() {
-
     function deepEqual(firstArgument, secondArgument) {
         var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, 
         amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
@@ -83,4 +81,3 @@
     }
 
     console.log(deepEqual(firstObject, secondObject));
-}())
