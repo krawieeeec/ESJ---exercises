@@ -1,4 +1,3 @@
-(function() {
 
     function verify(regexp, yes, no) {
         // Ignore unfinished exercises
@@ -42,5 +41,3 @@
         ["red platypus", "wobbling nest"],
         ["earth bed", "learning ape"]);
  
-
-}())
