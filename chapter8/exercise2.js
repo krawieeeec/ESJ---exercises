@@ -1,5 +1,3 @@
-(function() {
-
     var box = {
         locked: true,
         unlock: function() { this.locked = false; },
@@ -42,4 +40,3 @@
       }
 
       console.log(box.locked);
-}())

@@ -1,4 +1,3 @@
-(function() {
 
     function MultiplicatorUnitFailure(message) {
         this.message = message;
@@ -28,4 +27,3 @@
     }      
     
     console.log(reliableMultiply(8, 8));
-}())
