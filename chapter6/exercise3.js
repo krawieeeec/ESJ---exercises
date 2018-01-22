@@ -1,5 +1,3 @@
-(function() {
-    
     //Custom types of objects.
     function ArraySeq(array) {
         this.array = array;
@@ -74,4 +72,3 @@
     
     console.log(rangeSeq);
     console.log(logFive(rangeSeq));
-}())

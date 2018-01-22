@@ -1,5 +1,3 @@
-(function() {
-
     function Vector(x, y) {
         this.x = x;
         this.y = y;
@@ -31,4 +29,3 @@
     vector1.minus(vector2);
     console.log(vector1);
     console.log(vector1.length);
-}())
