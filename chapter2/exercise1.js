@@ -1,5 +1,3 @@
-(function() {
-
     function displayTriangle() {
         var triangle = '#';
 
@@ -9,4 +7,3 @@
         }
     }
     displayTriangle();
-}())

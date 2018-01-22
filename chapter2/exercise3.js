@@ -1,5 +1,3 @@
-(function() {
-
     function displayFixedChessBoard() {
         var lineOfChessBoard = "";
 
@@ -14,4 +12,3 @@
         }
     }
     displayFixedChessBoard();
-}())
