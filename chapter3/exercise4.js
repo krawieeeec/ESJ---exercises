@@ -1,13 +1,13 @@
     function countChar(sequenceCharacters, selectedChar) {
-        var counter = 0, result;
+        var counter = 0;
 
         for(var i = 0, lengthOfSequence = sequenceCharacters.length; i < lengthOfSequence; i++) {
             if(sequenceCharacters[i] == selectedChar){
                 counter += 1;
             }
         }
-        result = counter;
-        return result; 
+        
+        return counter; 
     };
 
     console.log(countChar("Dadasdddasddwid", "a"));

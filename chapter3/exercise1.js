@@ -1,18 +1,11 @@
-   function min(firstNumber, secondNumber) {
-        var result;
-
+function min(firstNumber, secondNumber) {
+        
         if(firstNumber < secondNumber) {
-                result = firstNumber;
-                return result;
-        } else if (secondNumber < firstNumber) {
-                result = secondNumber;
-                return result;
-        } else if (firstNumber == secondNumber) {
-                result = firstNumber;
-                return result;
+                return firstNumber;
+        } else {
+                return secondNumber
         }
-         
-    }
+}
 
-   console.log(min(3,1));
+console.log(min(3,3));
 
