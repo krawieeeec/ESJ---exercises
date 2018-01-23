@@ -14,7 +14,7 @@
                     rest: null
                 };
                 list = list.rest;
-            } else if(i == (lengthOfArray - 1)) {
+            } else if(i === (lengthOfArray - 1)) {
                 list.rest = null;
             }
         }
@@ -22,12 +22,13 @@
     }
 
     function listToArray(list) {
-        var array = [], deepingList = true;
+        var array = [];
+        var deepingList = true;
 
         do{
-            if(list.value != null) {
+            if(list.value !== null) {
                 array.push(list.value);
-                if(list.rest != null) {
+                if(list.rest !== null) {
                     list = list.rest;
                 } else {
                     deepingList = false;
@@ -51,12 +52,13 @@
     }
 
     function nth(list, positionOnList) {
-        var foundElement, deepingList = true;
+        var foundElement;
+        var deepingList = true;
 
         for(var i = 1; i <= positionOnList; i++){
-            if(i == positionOnList) {
+            if(i === positionOnList) {
                 foundElement = list.value;
-            } else if(list.rest == null){
+            } else if(list.rest === null){
                 break;
             } else {
                 list = list.rest;

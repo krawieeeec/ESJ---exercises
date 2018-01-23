@@ -1,32 +1,21 @@
     function deepEqual(firstArgument, secondArgument) {
-        var result, checkedProperties = [], amountOfPropertiesFirstArgument = 0, 
-        amountOfPropertiesSecondArgument = 0, elementNotFound = -1;
+        var result;
+        var elementNotFound = -1;
                     
-        if((typeof firstArgument != "object") && (typeof secondArgument != "object")) {
-            if(firstArgument === secondArgument) {
-                result = true
-                return result;
-            } else {
-                result = false;
-                return result;
-            }
-        } else if((typeof firstArgument == "object") && (typeof secondArgument == "object")) {
-            if(firstArgument == null && secondArgument == null) {
-                result = true;
-                return result;
-            } else if(firstArgument != null && secondArgument != null) {
-                amountOfPropertiesFirstArgument = Object.keys(firstArgument).length;
-                amountOfPropertiesSecondArgument = Object.keys(secondArgument).length;
-                if(amountOfPropertiesFirstArgument != amountOfPropertiesSecondArgument) {
-                    result = false;
-                    return result;
+        if((typeof firstArgument !== "object") && (typeof secondArgument !== "object")) {
+            return (firstArgument === secondArgument);
+        } else if((typeof firstArgument === "object") && (typeof secondArgument === "object")) {
+            if(firstArgument === null && secondArgument === null) {
+                return true;
+            } else if(firstArgument !== null && secondArgument !== null) {
+                if (Object.keys(firstArgument).length !== Object.keys(secondArgument).length) { 
+                    return false; 
                 } else {
                     for(var propertyFirstArgument in firstArgument) {
                         for(var propertySecondArgument in secondArgument) {
                             if(propertyFirstArgument === propertySecondArgument) {
-                                if((typeof firstArgument[propertyFirstArgument] == "object") && (typeof secondArgument[propertySecondArgument] == "object")) {
-                                    if((firstArgument[propertyFirstArgument] != null) && (secondArgument[propertyFirstArgument] != null)) {
-                                        checkedProperties.push(propertyFirstArgument);
+                                if((typeof firstArgument[propertyFirstArgument] === "object") && (typeof secondArgument[propertySecondArgument] === "object")) {
+                                    if((firstArgument[propertyFirstArgument] !== null) && (secondArgument[propertyFirstArgument] !== null)) {
                                         result = deepEqual(firstArgument[propertyFirstArgument], secondArgument[propertySecondArgument]);
                                         if(!result) {
                                             return result;
@@ -34,28 +23,21 @@
                                     }
                                 } else {
                                     if(firstArgument[propertyFirstArgument] === secondArgument[propertySecondArgument]) {
-                                        checkedProperties.push(propertyFirstArgument);
                                         result = true;
                                     }else {
-                                        result = false;
-                                        return result;
+                                        return false;
                                     }
                                 }
                             }
-                        }
-                        if(checkedProperties.indexOf(propertyFirstArgument) == elementNotFound) {
-                            return false;
                         }
                     }
                     return result;
                 }
             } else {
-                result = false;
-                return result;
+                return false;
             }       
         } else {
-            result = false;
-            return result;
+            return false;
         }
     };
 

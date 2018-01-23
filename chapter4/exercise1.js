@@ -1,15 +1,16 @@
     function range(start, end) {
-        var result = [], thirdOptionalArgument = 0;
+        var result = [];
+        var thirdOptionalArgument = 0;
         
-        if(arguments.length == 2){
+        if(arguments.length === 2){
             for( ; start <= end; start++) {
                 result.push(start);
             }
             return result;
-        } else if(arguments.length == 3) {
+        } else if(arguments.length === 3) {
             thirdOptionalArgument = arguments[2];
                     
-            if(thirdOptionalArgument == 0){
+            if(thirdOptionalArgument === 0){
                 for( ; start <= end; start++) {
                     result.push(start);
                 }
