@@ -1,24 +1,22 @@
     function displayDivisibilityNumbers() {
-        var numberDivideByThree = false, numberDivideByFive = false, number = 1, result = "";
+        var number = 1, result = "";
 
         while(number < 100){
             if((number % 3) == 0) {
-                numberDivideByThree = true;
+                result = "Fizz";
             }
             if((number % 5) == 0) {
-                numberDivideByFive = true;
+                if(result == "") {
+                    result = "Buzz"
+                } else {
+                    result += "Buzz";
+                }
             }
-
-            if(numberDivideByThree && numberDivideByFive) {
-                console.log('FizzBuzz');
-            } else if(numberDivideByThree) {
-                console.log('Fizz');
-            } else if(numberDivideByFive) {
-                console.log('Buzz');
+            if(result != "") {
+                console.log(result);
+                console.log(number);    
             }
-
-            numberDivideByThree = false;
-            numberDivideByFive = false;
+            result = "";
             number++;
         }
     }
