@@ -41,17 +41,18 @@
       ];
       
       var children = ancestry.filter(function(person) {
-        if(person.mother != null) {
+        if(person.mother !== null) {
               return person;
           }
       });
 
       function average(array) {
-        var sumOfAge = 0, mother;  
+        var sumOfAge = 0;
+        var mother;  
         
         array.forEach(element => {     
             mother = array.filter(function(person) {
-                if(person.name == element.mother) {
+                if(person.name === element.mother) {
                     return person;
                 }
             })

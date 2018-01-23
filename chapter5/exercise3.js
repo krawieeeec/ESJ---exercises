@@ -41,22 +41,22 @@
       ];
       
       function createCenturies(array) {
-        var property, centuries = {};
+        var property;
+        var centuries = {};
 
         array.forEach(person => {
           property = (Math.ceil(person.died/100)).toString();
           if(!centuries.hasOwnProperty(property)) {   
             centuries[property] = [];
-            centuries[property].push(person);
-          } else {
-              centuries[property].push(person);
           }
+          centuries[property].push(person);
         });
         return centuries;
     }
 
     function displayAverageAgePerCentury(centuries) {
-      var output = "", currentAverage = 0;
+      var output = "";
+      var currentAverage = 0;
 
       function countAverageAge(array) {
         var sumAges = 0;
