@@ -6,7 +6,7 @@
     function RangeSeq(from, to) {
         this.array = [];
         
-        if(from != undefined && to != undefined) {
+        if(from !== undefined && to !== undefined) {
             for(;from <= to; from++){
                 this.array.push(from);
             }
@@ -33,29 +33,28 @@
     
     //Interface for iterate objects
     function logFive(object) {
-        var result = [], currentPropValue;
+        var result = [];
+        var currentPropValue;
         function iterate(object) {
             var array = [];
             function fetchValue(property) {
                 var value;
                 if(object.hasOwnProperty(property)) {
-                    value = object[property];
-                    return value;
+                    return object[property];
                 }else {
-                    value = ""
-                    return value;
+                    return "";
                 }
             }
     
-            if((typeof object != "object" )||( object == null) || (object == undefined)) {
+            if((typeof object !== "object" )||( object === null) || (object === undefined)) {
                 return array;
             }else {
                 for(prop in object) {
-                    if(typeof object[prop] == "object") {
+                    if(typeof object[prop] === "object") {
                         array = array.concat(iterate(object[prop]));
                     }else {
                         currentPropValue = fetchValue(prop);
-                        if(currentPropValue != "") {
+                        if(currentPropValue !== "") {
                             array.push(currentPropValue);
                         }
                     }
