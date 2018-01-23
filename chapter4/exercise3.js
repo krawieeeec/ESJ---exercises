@@ -3,7 +3,8 @@
         var list = {
             value: null,
             rest: null
-        }, referenceToAllList = list;
+        };
+        var referenceToAllList = list;
 
         for(var i = 0, lengthOfArray = array.length; i < lengthOfArray; i++) {
             list.value = array[i];
