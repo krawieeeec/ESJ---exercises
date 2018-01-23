@@ -1,5 +1,6 @@
     function displayDivisibilityNumbers() {
-        var number = 1, result = "";
+        var number = 1;
+        var result = "";
 
         while(number < 100){
             if((number % 3) == 0) {

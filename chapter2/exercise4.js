@@ -1,7 +1,8 @@
-    function displayFlexChessBoard(widthChessBoard, heightChessBoard) {
-        var lineOfChessBoard = "", subStringLineOfChessBoard = "";
+    function displayFlexChessBoard(width, height) {
+        var lineOfChessBoard = "";
+        var subStringLineOfChessBoard = "";
 
-        for(var i = 0; i < widthChessBoard; i++) {
+        for(var i = 0; i < width; i++) {
             if(i % 2 == 0) {
                 lineOfChessBoard += " ";
             } else {
@@ -9,7 +10,7 @@
             }
         }
         
-        for(var i = 1; i <= heightChessBoard; i++) {
+        for(var i = 1; i <= height; i++) {
             console.log(lineOfChessBoard);
             if(i % 2 == 0) {
                 subStringLineOfChessBoard = lineOfChessBoard.slice(0, lineOfChessBoard.length - 1);
