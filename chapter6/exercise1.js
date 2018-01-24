@@ -14,15 +14,15 @@
 
     Object.defineProperty(Vector.prototype, "length", {
         get: function() {
-            var x = Math.pow(this.x, 2),
-            y = Math.pow(this.y, 2);
+            var x = Math.pow(this.x, 2);
+            var y = Math.pow(this.y, 2);
 
             return Math.sqrt(x + y);
         }
     });
 
-    var vector1 = new Vector(3,4), 
-    vector2 = new Vector(3,-40);
+    var vector1 = new Vector(3,4); 
+    var vector2 = new Vector(3,-40);
     
     vector1.plus(vector2);
     console.log(vector1);

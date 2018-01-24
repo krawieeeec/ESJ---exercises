@@ -6,8 +6,8 @@
     function RangeSeq(from, to) {
         this.array = [];
         
-        if(from !== undefined && to !== undefined) {
-            for(;from <= to; from++){
+        if (from !== undefined && to !== undefined) {
+            for ( ; from <= to; from++){
                 this.array.push(from);
             }
         }
@@ -23,13 +23,13 @@
             i:[1,2,3,4]
         },
         dawid: 'Poznań'
-    },
-    y =[
+    };
+    var y =[
         1,2,3,4,5,{x:1,y:2}
-    ],
-    z = [1,2,3],
-    arraySeq = new ArraySeq([1,50,45,33,33,22]),
-    rangeSeq = new RangeSeq(1, 100);
+    ];
+    var z = [1,2,3];
+    var arraySeq = new ArraySeq([1,50,45,33,33,22]);
+    var rangeSeq = new RangeSeq(1, 100);
     
     //Interface for iterate objects
     function logFive(object) {
@@ -39,22 +39,22 @@
             var array = [];
             function fetchValue(property) {
                 var value;
-                if(object.hasOwnProperty(property)) {
+                if (object.hasOwnProperty(property)) {
                     return object[property];
-                }else {
+                } else {
                     return "";
                 }
             }
     
-            if((typeof object !== "object" )||( object === null) || (object === undefined)) {
+            if ((typeof object !== "object" )||( object === null) || (object === undefined)) {
                 return array;
-            }else {
+            } else {
                 for(prop in object) {
-                    if(typeof object[prop] === "object") {
+                    if (typeof object[prop] === "object") {
                         array = array.concat(iterate(object[prop]));
-                    }else {
+                    } else {
                         currentPropValue = fetchValue(prop);
-                        if(currentPropValue !== "") {
+                        if (currentPropValue !== "") {
                             array.push(currentPropValue);
                         }
                     }
@@ -63,7 +63,7 @@
             return array;
         }
         result = iterate(object);
-        if(result.length > 5) {
+        if (result.length > 5) {
             result = result.slice(0,5);
         }
         return result;    
