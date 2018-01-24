@@ -1,26 +1,26 @@
     function displayFlexChessBoard(width, height) {
-        var lineOfChessBoard = "";
-        var subStringLineOfChessBoard = "";
+        var line = "";
+        var subLine = "";
 
         for(var i = 0; i < width; i++) {
-            if(i % 2 == 0) {
-                lineOfChessBoard += " ";
-            } else {
-                lineOfChessBoard += "#";
-            }
+
+            i % 2 === 0 ? (
+                line += " "
+            ) : (
+                line += "#"
+            )
         }
         
         for(var i = 1; i <= height; i++) {
-            console.log(lineOfChessBoard);
-            if(i % 2 == 0) {
-                subStringLineOfChessBoard = lineOfChessBoard.slice(0, lineOfChessBoard.length - 1);
-                lineOfChessBoard = (" " + subStringLineOfChessBoard);
-            } else {
-                subStringLineOfChessBoard = lineOfChessBoard.slice(0, lineOfChessBoard.length - 1);
-                lineOfChessBoard = ("#" + subStringLineOfChessBoard);  
-            }
+            console.log(line);
+            subLine = line.slice(0, line.length - 1)
+            
+            i % 2 === 0 ? (
+                line = (" " + subLine)
+            ) : (
+                line = ("#" + subLine)
+            )
         }
-        
     }
 
     displayFlexChessBoard(11,9);
