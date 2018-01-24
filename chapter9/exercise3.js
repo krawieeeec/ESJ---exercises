@@ -6,7 +6,7 @@
     var regEx = /^[+\-]?((\d+(\.\d*)?)|(\.\d+))(([eE][+\-]?)\d+)?$/;
     
     numbers1.forEach(function(element) {
-        if(!regEx.test(element)) {
+        if (!regEx.test(element)) {
             console.log("Failed to match '" + element + "'");
         }
     })
