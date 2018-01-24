@@ -1,8 +1,8 @@
     function countChar(sequenceCharacters, selectedChar) {
         var counter = 0;
 
-        for(var i = 0; i < sequenceCharacters.length; i++) {
-            if(sequenceCharacters[i] === selectedChar){
+        for (var i = 0; i < sequenceCharacters.length; i++) {
+            if (sequenceCharacters[i] === selectedChar){
                 counter += 1;
             }
         }
