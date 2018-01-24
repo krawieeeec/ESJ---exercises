@@ -1,7 +1,7 @@
 function countBs(sequenceCharacters) {
     var counter = 0;
         
-    for(var i = 0, lengthOfSequence = sequenceCharacters.length; i < lengthOfSequence; i++) {
+    for(var i = 0; i < sequenceCharacters.length; i++) {
         if(sequenceCharacters[i] === "B"){
             counter += 1;
         }
