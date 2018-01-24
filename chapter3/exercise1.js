@@ -1,11 +1,6 @@
 function min(firstNumber, secondNumber) {
-        
-        if(firstNumber < secondNumber) {
-                return firstNumber;
-        } else {
-                return secondNumber
-        }
+        return firstNumber < secondNumber ? firstNumber : secondNumber
 }
 
-console.log(min(3,3));
+console.log(min(3,1));
 
