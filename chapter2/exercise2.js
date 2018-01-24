@@ -2,7 +2,7 @@
         var number = 1;
         var result = "";
 
-        for( ; number <= 100; number++) {
+        for ( ; number <= 100; number++) {
             
             number % 3 === 0 ? (
                 result += "Fizz",

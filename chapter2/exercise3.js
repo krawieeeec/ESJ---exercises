@@ -1,7 +1,7 @@
     function displayFixedChessBoard() {
         var line = "";
 
-        for(var row = 1; row <= 8; row++) {
+        for (var row = 1; row <= 8; row++) {
 
             row % 2 !== 0 ? (
                 line = " # # # #"
