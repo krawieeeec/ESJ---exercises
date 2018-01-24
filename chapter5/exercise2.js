@@ -52,11 +52,11 @@
         
         array.forEach(element => {     
             mother = array.filter(function(person) {
-                if(person.name === element.mother) {
+                if (person.name === element.mother) {
                     return person;
                 }
             })
-            if(mother.length != 0) {
+            if (mother.length !== 0) {
                 sumOfAge += (element.born - mother[0].born);
             }
             

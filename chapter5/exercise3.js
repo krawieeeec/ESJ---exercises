@@ -46,7 +46,7 @@
 
         array.forEach(person => {
           property = (Math.ceil(person.died/100)).toString();
-          if(!centuries.hasOwnProperty(property)) {   
+          if (!centuries.hasOwnProperty(property)) {   
             centuries[property] = [];
           }
           centuries[property].push(person);
@@ -66,7 +66,7 @@
         return (sumAges / array.length).toFixed(1);
       }
       
-      for(century in centuries) {
+      for (century in centuries) {
         currentAverage = countAverageAge(centuries[century]);
         output = output + century +": " + currentAverage + "\n";
       }

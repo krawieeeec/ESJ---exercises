@@ -2,7 +2,7 @@
     function some(array, predicate) {
         var result = false;
         array.forEach(element => {
-            if(predicate(element)) {
+            if (predicate(element)) {
                 result = true;
             }
         });
@@ -12,7 +12,7 @@
     function every(array, predicate) {
         var result = true;
         array.forEach(element => {
-            if(!predicate(element)) {
+            if (!predicate(element)) {
                 result = false;
             }
         });
